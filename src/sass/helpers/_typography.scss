@@ -1,0 +1,14 @@
+
+//Font Sizes
+@each $element, $font_size in $font_sizes {
+	.font-size-#{$element} {
+		font-size: $font_size;
+	}
+}
+
+//Text Colors
+@each $element, $color in $text_colors {
+	.color-#{$element} {
+		font-size: $color;
+	}
+}

@@ -1,0 +1,39 @@
+// ----------------------------------------------------------------------------------
+// Include page related mixins here
+// Prefered name : PAGE_NAME_media_max_lg
+// 
+// @include homepage_media_max_lg;
+// ----------------------------------------------------------------------------------
+
+
+@media print {
+
+}
+
+//xl Screen Sizes
+@media (max-width:map-get($breakepoints, xl)){
+
+}
+
+
+//lg Screen Sizes
+@media (max-width:map-get($breakepoints, lg)){
+
+}
+
+//md Screen Sizes
+@media (max-width:map-get($breakepoints, md)){
+	
+}
+
+//sm Screen Sizes
+@media (max-width: map-get($breakepoints, sm)) {
+	
+}
+
+//xs Screen Sizes/
+@media (max-width:map-get($breakepoints, xs)){
+
+}
+
+

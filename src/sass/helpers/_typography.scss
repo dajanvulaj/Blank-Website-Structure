@@ -9,6 +9,6 @@
 //Text Colors
 @each $element, $color in $text_colors {
 	.color-#{$element} {
-		font-size: $color;
+		color: $color;
 	}
 }

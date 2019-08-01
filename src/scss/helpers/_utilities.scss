@@ -1,0 +1,31 @@
+* {
+	margin:0px; 
+	padding:0px; 
+	//letter-spacing:$letterSpacing;
+
+	&:before,
+	&:after {
+		box-sizing: inherit;
+	}
+}
+
+.clearfix {
+	zoom: 1;
+	&:before, &:after {
+		content: ".";
+		display: block;
+		height: 0;
+		overflow:hidden;
+		&:after {
+			clear: both;
+		}
+	}
+}
+
+
+.unselectable, .unselectable > *	{-webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}
+.clear		 						{clear: both;}
+
+//THIS ARE USED WILL DEVELOPING AND WILL BE REMOVED
+.dev-outline-red 	{outline:1px solid red;}
+.dev-outline-blue 	{outline:1px solid blue;}

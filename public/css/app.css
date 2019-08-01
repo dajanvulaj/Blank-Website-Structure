@@ -10654,62 +10654,9 @@ a.text-dark:focus {
 
 /* Css style goes here */
 
-* {
-  margin: 0px;
-  padding: 0px;
-  font-size: 14px;
-}
-
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-html {
-  height: 100%;
-  box-sizing: border-box;
-}
-
-body {
-  position: relative;
+html body {
   margin: 0;
-  padding-bottom: 110px !important;
-  min-height: 100%;
-  overflow-x: hidden;
-}
-
-body.overflow-y-hidden {
-  overflow-y: hidden;
-}
-
-.clearfix {
-  zoom: 1;
-}
-
-.clearfix:before,
-.clearfix:after {
-  content: ".";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-
-.clearfix:before:after,
-.clearfix:after:after {
-  clear: both;
-}
-
-.unselectable,
-.unselectable > * {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.clear {
-  clear: both;
+  padding: 0px;
 }
 
 .icon {
@@ -10753,5 +10700,53 @@ body.overflow-y-hidden {
 
 .font-size-large {
   font-size: 18px;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:before:after,
+.clearfix:after:after {
+  clear: both;
+}
+
+.unselectable,
+.unselectable > * {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.clear {
+  clear: both;
+}
+
+.dev-outline-red {
+  outline: 1px solid red;
+}
+
+.dev-outline-blue {
+  outline: 1px solid blue;
 }
 

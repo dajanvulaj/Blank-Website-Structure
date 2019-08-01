@@ -11,4 +11,23 @@
 	.color-#{$element} {
 		color: $color;
 	}
+
+	.hover-color-#{$element} {
+		&:hover {
+			color: $color;
+		}
+	}
+}
+
+//Bg Colors
+@each $element, $color in $bg_colors {
+	.bg-#{$element} {
+		background-color: $color;
+	}
+
+	.hover-bg-#{$element} {
+		&:hover {
+			background-color: $color;
+		}
+	}
 }

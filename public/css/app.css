@@ -10702,6 +10702,42 @@ html body {
   font-size: 18px;
 }
 
+.ratio {
+  position: relative;
+}
+
+.ratio:before {
+  /*using ::before to add blank content width pading-top:100% */
+  content: "";
+  display: block;
+  padding-top: 100%;
+  /* initial ratio of 1:1*/
+}
+
+.ratio.ratio-2_1:before {
+  padding-top: 50%;
+}
+
+.ratio.ratio-1_2:before {
+  padding-top: 200%;
+}
+
+.ratio.ratio-4_3:before {
+  padding-top: 75%;
+}
+
+.ratio.ratio-16_9:before {
+  padding-top: 56.25%;
+}
+
+.ratio .body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
 * {
   margin: 0px;
   padding: 0px;

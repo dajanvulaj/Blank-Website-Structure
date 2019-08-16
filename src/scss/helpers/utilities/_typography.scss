@@ -1,0 +1,33 @@
+
+//Font Sizes
+@each $element, $font_size in $font_sizes {
+	.font-size-#{$element} {
+		font-size: $font_size;
+	}
+}
+
+//Text Colors
+@each $element, $color in $text_colors {
+	.color-#{$element} {
+		color: $color;
+	}
+
+	.hover-color-#{$element} {
+		&:hover {
+			color: $color;
+		}
+	}
+}
+
+//Bg Colors
+@each $element, $color in $bg_colors {
+	.bg-#{$element} {
+		background-color: $color;
+	}
+
+	.hover-bg-#{$element} {
+		&:hover {
+			background-color: $color;
+		}
+	}
+}

@@ -1,0 +1,31 @@
+.ratio {
+	position:relative;
+
+	&:before{ /*using ::before to add blank content width pading-top:100% */
+		content: "";
+		display: block;
+		padding-top: 100%; 	/* initial ratio of 1:1*/
+	}
+
+	&.ratio-2_1:before{
+		padding-top: 50%;
+	}
+	&.ratio-1_2:before{
+		padding-top: 200%;
+	}
+	&.ratio-4_3:before{
+		padding-top: 75%;
+	}
+	&.ratio-16_9:before{
+		padding-top: 56.25%;
+	}
+
+	.body {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0; 
+	}
+
+}

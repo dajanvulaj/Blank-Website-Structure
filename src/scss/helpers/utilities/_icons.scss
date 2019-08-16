@@ -1,0 +1,21 @@
+.icon {
+	display:inline-block;
+	background-position:center;
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+
+	//Generate Icons Sizes
+	@each $class,$size in map-get($icon, 'sizes') {
+	  &.icon-#{$class} {
+	  	width:$size;
+	  	height:$size;
+		}
+	}
+
+	//Generate Icons Sources
+	@each $iconName,$path,$iconExt in map-get($icon, 'sources') {
+	  &.icon-#{$iconName} {
+	  	background-image:url(../images/icons/#{$path}#{$iconName}.#{$iconExt});
+		}
+	}
+}

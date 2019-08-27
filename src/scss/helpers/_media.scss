@@ -6,34 +6,33 @@
 // ----------------------------------------------------------------------------------
 
 
+
+// Down Bootstrap LG
+@include media-breakpoint-down(lg) {
+
+}
+
+// Down Bootstrap MD
+@include media-breakpoint-down(md) {
+
+}
+
+// Down Bootstrap SM
+@include media-breakpoint-down(sm) {
+
+}
+
+// Down Bootstrap XS
+@include media-breakpoint-down(xs) {
+
+}
+
+//Custom BreakPoint
+//@media (max-width:map-get($breakepoints, xl)){}
+
+
+// Print
 @media print {
 
 }
-
-//xl Screen Sizes
-@media (max-width:map-get($breakepoints, xl)){
-
-}
-
-
-//lg Screen Sizes
-@media (max-width:map-get($breakepoints, lg)){
-
-}
-
-//md Screen Sizes
-@media (max-width:map-get($breakepoints, md)){
-	
-}
-
-//sm Screen Sizes
-@media (max-width: map-get($breakepoints, sm)) {
-	
-}
-
-//xs Screen Sizes/
-@media (max-width:map-get($breakepoints, xs)){
-
-}
-
 

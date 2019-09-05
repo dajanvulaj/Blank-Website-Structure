@@ -5,12 +5,14 @@ import VueRouter from 'vue-router';
 import Axios from 'axios';
 import moment from 'moment';
 import lodash from 'lodash';
+import Dotdotdoter from 'dotdotdot-js/dist/dotdotdot.es6';
 
 
 window.Vue = Vue;
 window.axios = Axios;
 window.moment = moment;
 window._ = lodash;
+window.Dotdotdot = Dotdotdoter;
 
 Vue.use(VueRouter);
 

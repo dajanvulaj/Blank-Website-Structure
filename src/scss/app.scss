@@ -30,6 +30,8 @@
 			// position: relative;
 			// padding-bottom: 110px !important; 
 			// overflow-x:hidden;
+			line-height: map-get($defaults, 'line-height');
+			font-size: map-get($font_sizes, 'default');
 			
 			margin: 0;
 			padding:0px;

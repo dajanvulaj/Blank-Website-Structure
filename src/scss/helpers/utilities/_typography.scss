@@ -3,7 +3,18 @@
 @each $element, $font_size in $font_sizes {
 	.font-size-#{$element} {
 		font-size: $font_size;
+		line-height: map-get($defaults, 'line-height');
+
+		&.dotdotdot {
+			@for $i from 1 through 5 {
+				&.lines-#{$i} {
+					max-height: ($font_size * map-get($defaults, 'line-height-size')) * $i;
+					overflow:hidden;
+				}
+			}
+		}
 	}
+
 }
 
 //Text Colors

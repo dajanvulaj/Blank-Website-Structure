@@ -10655,6 +10655,8 @@ a.text-dark:focus {
 /* Css style goes here */
 
 html body {
+  line-height: 1.4em;
+  font-size: 14px;
   margin: 0;
   padding: 0px;
 }
@@ -10688,18 +10690,122 @@ html body {
 
 .font-size-small {
   font-size: 12px;
+  line-height: 1.4em;
+}
+
+.font-size-small.dotdotdot.lines-1 {
+  max-height: 16.8px;
+  overflow: hidden;
+}
+
+.font-size-small.dotdotdot.lines-2 {
+  max-height: 33.6px;
+  overflow: hidden;
+}
+
+.font-size-small.dotdotdot.lines-3 {
+  max-height: 50.4px;
+  overflow: hidden;
+}
+
+.font-size-small.dotdotdot.lines-4 {
+  max-height: 67.2px;
+  overflow: hidden;
+}
+
+.font-size-small.dotdotdot.lines-5 {
+  max-height: 84px;
+  overflow: hidden;
 }
 
 .font-size-default {
   font-size: 14px;
+  line-height: 1.4em;
+}
+
+.font-size-default.dotdotdot.lines-1 {
+  max-height: 19.6px;
+  overflow: hidden;
+}
+
+.font-size-default.dotdotdot.lines-2 {
+  max-height: 39.2px;
+  overflow: hidden;
+}
+
+.font-size-default.dotdotdot.lines-3 {
+  max-height: 58.8px;
+  overflow: hidden;
+}
+
+.font-size-default.dotdotdot.lines-4 {
+  max-height: 78.4px;
+  overflow: hidden;
+}
+
+.font-size-default.dotdotdot.lines-5 {
+  max-height: 98px;
+  overflow: hidden;
 }
 
 .font-size-medium {
   font-size: 16px;
+  line-height: 1.4em;
+}
+
+.font-size-medium.dotdotdot.lines-1 {
+  max-height: 22.4px;
+  overflow: hidden;
+}
+
+.font-size-medium.dotdotdot.lines-2 {
+  max-height: 44.8px;
+  overflow: hidden;
+}
+
+.font-size-medium.dotdotdot.lines-3 {
+  max-height: 67.2px;
+  overflow: hidden;
+}
+
+.font-size-medium.dotdotdot.lines-4 {
+  max-height: 89.6px;
+  overflow: hidden;
+}
+
+.font-size-medium.dotdotdot.lines-5 {
+  max-height: 112px;
+  overflow: hidden;
 }
 
 .font-size-large {
   font-size: 18px;
+  line-height: 1.4em;
+}
+
+.font-size-large.dotdotdot.lines-1 {
+  max-height: 25.2px;
+  overflow: hidden;
+}
+
+.font-size-large.dotdotdot.lines-2 {
+  max-height: 50.4px;
+  overflow: hidden;
+}
+
+.font-size-large.dotdotdot.lines-3 {
+  max-height: 75.6px;
+  overflow: hidden;
+}
+
+.font-size-large.dotdotdot.lines-4 {
+  max-height: 100.8px;
+  overflow: hidden;
+}
+
+.font-size-large.dotdotdot.lines-5 {
+  max-height: 126px;
+  overflow: hidden;
 }
 
 .ratio {

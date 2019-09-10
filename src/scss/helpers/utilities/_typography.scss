@@ -18,7 +18,7 @@
 }
 
 //Text Colors
-@each $element, $color in $text_colors {
+@each $element, $color in $colors {
 	.color-#{$element} {
 		color: $color;
 	}
@@ -28,10 +28,7 @@
 			color: $color;
 		}
 	}
-}
 
-//Bg Colors
-@each $element, $color in $bg_colors {
 	.bg-#{$element} {
 		background-color: $color;
 	}

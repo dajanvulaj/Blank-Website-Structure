@@ -27,24 +27,19 @@
 	);
 
 
-	//Text Colors
+	// Colors
 	// .color-attr
 	// .hover-color-attr
-	$text_colors: (
-	
-	);
-
-	//BG Colors
 	// .bg-attr
 	// .hover-bg-attr
-	$bg_colors: (
+	$colors: (
 	
 	);
 
 	$spacings: (
 		'small' : 10px,
-		'medium' : 15px,
-		'default' : 20px,
+		'default' : 15px,
+		'medium' : 20px,
 		'large' : 25px
 	);
 

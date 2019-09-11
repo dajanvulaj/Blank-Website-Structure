@@ -11,24 +11,60 @@
 @include media-breakpoint-down(lg) {
 	//Generate FontClasses per BreakPoint
 	@include generate_font_classes_per_breakpoint ('lg');
+
+	//Objects
+		//
+
+	//Layouts
+		//
+
+	//Pages
+		//
 }
 
 // Down Bootstrap MD
 @include media-breakpoint-down(md) {
 	//Generate FontClasses per BreakPoint
 	@include generate_font_classes_per_breakpoint ('md');
+
+	//Objects
+		//
+
+	//Layouts
+		//
+
+	//Pages
+		//
 }
 
 // Down Bootstrap SM
 @include media-breakpoint-down(sm) {
 	//Generate FontClasses per BreakPoint
 	@include generate_font_classes_per_breakpoint ('sm');
+
+	//Objects
+		//
+
+	//Layouts
+		//
+
+	//Pages
+		//
 }
 
 // Down Bootstrap XS
 @include media-breakpoint-down(xs) {
 	//Generate FontClasses per BreakPoint
 	@include generate_font_classes_per_breakpoint ('xs');
+
+	//Objects
+		//
+
+	//Layouts
+		//
+
+	//Pages
+		//
 }
 
 //Custom BreakPoint

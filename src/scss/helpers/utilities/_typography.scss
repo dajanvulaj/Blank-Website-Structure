@@ -1,21 +1,6 @@
 
-//Font Sizes
-@each $element, $font_size in $font_sizes {
-	.font-size-#{$element} {
-		font-size: $font_size;
-		line-height: map-get($defaults, 'line-height');
-
-		&.dotdotdot {
-			@for $i from 1 through 5 {
-				&.lines-#{$i} {
-					max-height: ($font_size * map-get($defaults, 'line-height-size')) * $i;
-					overflow:hidden;
-				}
-			}
-		}
-	}
-
-}
+//Generate Font Classes
+@include generate_font_classes_per_breakpoint ('default');
 
 //Text Colors
 @each $element, $color in $colors {

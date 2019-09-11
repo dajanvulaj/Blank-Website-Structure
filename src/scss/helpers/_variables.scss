@@ -1,14 +1,7 @@
-// Breakpoints
-	$breakepoints: (
-		xl: 1300px,
-		lg: 1200px,
-		md: 992px,
-		sm: 768px,
-		xs: 480px
-	);
 
 	//Defaults
 	$defaults: (
+		'font-size': get_font_size_by_breakpoint('default', 'default'),
 		'line-height': 1.4em,
 		//Dotdotdot plugin is supported just add these classes { .font-size-[size].dotdotdot.lines-[1-5] }
 		'line-height-size': 1.4,
@@ -19,13 +12,24 @@
 //Typography
 	//Font Sizes
 	// .font-size-attr
+	// get_font_size_by_breakpoint('small', 'xs');
 	$font_sizes: (
-		small: 	12px,
-		default: 14px,
-		medium: 	16px,
-		large: 	18px
+		// 'demo': (
+		// 	'default' : 12px,
+		// 	'lg' : 'previous', // default | previous | 12unit | 12%
+		// 	'md' : 'previous',
+		// 	'sm' : 'previous',
+		// 	'xs' : 'previous',
+		//	'custom_breakpoint' : 'default'
+		// ),
+		'default': (
+			'default' : 14px,
+			'lg' : 'previous',
+			'md' : 'previous',
+			'sm' : 'previous',
+			'xs' : 'previous'
+		)
 	);
-
 
 	// Colors
 	// .color-attr

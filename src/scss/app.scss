@@ -16,6 +16,7 @@
 
 // NonPointing Helpers
 	@import './helpers/variables';
+	@import './helpers/functions';
 	@import './helpers/mixins';
 
 
@@ -31,7 +32,7 @@
 			// padding-bottom: 110px !important; 
 			// overflow-x:hidden;
 			line-height: map-get($defaults, 'line-height');
-			font-size: map-get($font_sizes, 'default');
+			font-size: map-get($defaults, 'font-size');
 			
 			margin: 0;
 			padding:0px;

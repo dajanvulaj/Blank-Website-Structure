@@ -1,0 +1,25 @@
+	// Helpers
+	@import './helpers/variables';
+	@import './helpers/mixins';
+
+	//Css goes here
+	.btn {
+		&.btn-active-clean {
+			border:0;
+			outline:0;
+			box-shadow:none;
+
+			&:active, &:hover, &:focus {
+				border:0;
+				outline:0;
+				box-shadow:none;
+			}
+		}
+	}
+
+	@import './helpers/media';
+	
+
+
+	
+	

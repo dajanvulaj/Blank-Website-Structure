@@ -37,6 +37,11 @@
 		//
 }
 
+//Wordpress Tablet BreakPoint
+// @media screen and (max-width:782px) {
+// 	
+// }
+
 // Down Bootstrap SM
 @include media-breakpoint-down(sm) {
 	//Generate FontClasses per BreakPoint
@@ -51,6 +56,14 @@
 	//Pages
 		//
 }
+
+//Wordpress Mobile BreakPoint
+// @media screen and (max-width:600px) {
+// 	//AdminBar Will be fixed on mobile
+// 	#wpadminbar {
+// 		position:fixed;
+// 	}
+// }
 
 // Down Bootstrap XS
 @include media-breakpoint-down(xs) {

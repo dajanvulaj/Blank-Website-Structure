@@ -3,7 +3,7 @@
 	@import './helpers/mixins';
 
 	//Css goes here
-	.btn {
+	button, button.btn {
 		&.btn-active-clean {
 			border:0;
 			outline:0;

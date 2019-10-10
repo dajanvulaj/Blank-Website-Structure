@@ -7,7 +7,7 @@
 }
 
 //Loops throw previous font sizes
-@function get_previous_font_size($font_size_key, $breakpoint){
+@function get_previous_font_size($font_sizes, $font_size_key, $breakpoint){
 	$fontSize : map-get($font_sizes, $font_size_key);
 	$currentIndex: index(map-keys($fontSize), $breakpoint);
 	$previousIndex: $currentIndex - 1;
@@ -17,11 +17,11 @@
 
 	//Check if previous is still == previous
 	@if $previous_fontSize_value == 'previous' {
-		@return get_previous_font_size($font_size_key, $previous_fontSize_bp);
+		@return get_previous_font_size($font_sizes, $font_size_key, $previous_fontSize_bp);
 	} @else {
 		//Get the New value from breakpoint
 		// @return $previous_fontSize_bp;
-		@return get_font_size_by_breakpoint($font_size_key, $previous_fontSize_bp);
+		@return get_font_size_by_breakpoint($font_sizes, $font_size_key, $previous_fontSize_bp);
 	}
 }
 
@@ -37,7 +37,7 @@
 }
 
 //Returns the font-size of a desired font_key PER breakpoint
-@function get_font_size_by_breakpoint($font_size_key, $breakpoint: 'default'){
+@function get_font_size_by_breakpoint($font_sizes, $font_size_key, $breakpoint: 'default'){
 	// Check unit
 	$fontSizeMap : map-get($font_sizes, $font_size_key);
 	$value : map-get($fontSizeMap, 'default');
@@ -49,7 +49,7 @@
 		@return $value;
 	} @else if $newValue == 'previous' {
 		//Get Previous Font size
-		@return get_previous_font_size($font_size_key, $breakpoint);
+		@return get_previous_font_size($font_sizes, $font_size_key, $breakpoint);
 	} @else if type-of($newValue) == string {
 		//Equals to breakpoint
 		$getFromThisBreakPoint: map-get($fontSizeMap, $breakpoint);
@@ -57,7 +57,7 @@
 		$newValue: map-get($fontSizeMap, $getFromThisBreakPoint);
 		@if $newValue == "previous" {
 			//Get Previous Font size
-			@return get_previous_font_size($font_size_key, $breakpoint);
+			@return get_previous_font_size($font_sizes, $font_size_key, $breakpoint);
 		} @else if $newValue == 'default' {
 			@return $value;
 		}

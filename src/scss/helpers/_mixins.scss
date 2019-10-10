@@ -1,7 +1,7 @@
 @mixin generate_font_classes_per_breakpoint ($breakpoint){
 	@each $fontKey, $fontMap in $font_sizes {
 
-		$font_size: get_font_size_by_breakpoint($fontKey, $breakpoint);
+		$font_size: get_font_size_by_breakpoint($font_sizes,$fontKey, $breakpoint);
 		
 		.font-size-#{$fontKey} {
 			font-size: $font_size;

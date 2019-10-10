@@ -56,7 +56,7 @@
 
 //Defaults
 	$defaults: (
-		'font-size': get_font_size_by_breakpoint($font_sizes, 'default', 'default'),
+		'font-size': get_font_size($font_sizes, 'default'),
 		'line-height': 1.4em,
 		//Dotdotdot plugin is supported just add these classes { .font-size-[size].dotdotdot.lines-[1-5] }
 		'line-height-size': 1.4,

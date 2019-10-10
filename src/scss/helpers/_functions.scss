@@ -68,3 +68,11 @@
 		@return get_font_size_by_unit($fontSizeMap, $newValue);
 	}
 }
+
+//Return defualt font size per default breakpoint
+@function get_font_size($font_sizes, $font_size_key: 'default'){
+	$fontSizeMap : map-get($font_sizes, $font_size_key);
+	$fontSizeValue : map-get($fontSizeMap, 'default');
+
+	@return $fontSizeValue;
+}

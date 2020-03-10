@@ -11,6 +11,7 @@ let mix = require('laravel-mix');
  */
 
 mix
+	.sourceMaps()
 	.setResourceRoot('../')
 	.setPublicPath('./public')
 	.js('src/js/app.js', 'js/')

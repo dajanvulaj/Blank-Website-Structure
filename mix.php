@@ -1,10 +1,10 @@
 <?php
- if (! function_exists('mix')) {
+if (!function_exists('mix')) {
     /**
      * Get the path to a versioned Mix file.
      *
      * @param string $path
-     * @param string $manifestDirectory
+     * @param string $subDirectory
      * @return string
      *
      * @throws \Exception
@@ -21,34 +21,34 @@
         return false;
     }
 
-    function mix($path, $manifestDirectory = '')
+    function mix($path, $subDirectory = '')
     {
         static $manifest;
         $publicFolder = '/public';
         $rootPath = $_SERVER['DOCUMENT_ROOT'];
-        $publicPath = $rootPath . $publicFolder;
-        if ($manifestDirectory && ! starts_with($manifestDirectory, '/')) {
-            $manifestDirectory = "/{$manifestDirectory}";
+
+        if ($subDirectory && !starts_with($subDirectory, '/')) {
+            $subDirectory = "/{$subDirectory}";
         }
 
-        if (! $manifest) {
-            if (! file_exists($manifestPath = ($publicPath . $manifestDirectory.'/mix-manifest.json') )) {
+        $publicPath = $rootPath . $subDirectory . $publicFolder;
+        if (!$manifest) {
+            if (!file_exists($manifestPath = ($publicPath . '/mix-manifest.json'))) {
                 throw new Exception('The Mix manifest does not exist.');
             }
             $manifest = json_decode(file_get_contents($manifestPath), true);
         }
-        if (! starts_with($path, '/')) {
+        if (!starts_with($path, '/')) {
             $path = "/{$path}";
         }
+
         // $path = $publicFolder . $path;
-        if (! array_key_exists($path, $manifest)) {
+        if (!array_key_exists($path, $manifest)) {
             throw new Exception(
-                "Unable to locate Mix file: {$path}. Please check your ".
-                'webpack.mix.js output paths and try again.'
+                "Unable to locate Mix file: {$path}. Please check your " .
+                    'webpack.mix.js output paths and try again.'
             );
         }
-        return file_exists($publicPath . ($manifestDirectory.'/hot'))
-                    ? "http://localhost:8080{$manifest[$path]}"
-                    : $publicFolder.$manifestDirectory.$manifest[$path];
+        return $subDirectory . $publicFolder . $manifest[$path];
     }
 }

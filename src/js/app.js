@@ -4,23 +4,6 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
 
-$(document).ready(function(){
-
-	//Dotter
-	function dotter(){
-		//Enable DotDotDot
-		$( ".dotdotdot" ).each(function(){
-			var options = {
-				truncate: "letter",
-			};
-			new Dotdotdot( $(this)[0], options );
-		});
-	}
-
-	setTimeout(function(){
-		dotter();
-	}, 500);
-	
-});
+$(document).ready(function () {});

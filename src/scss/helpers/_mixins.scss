@@ -1,21 +1,20 @@
-@mixin generate_font_classes_per_breakpoint ($breakpoint){
-	@each $fontKey, $fontMap in $font_sizes {
+@mixin generate_font_classes_per_breakpoint($breakpoint) {
+  @each $fontKey, $fontMap in $font_sizes {
+    $font_size: get_font_size_by_breakpoint($font_sizes, $fontKey, $breakpoint);
 
-		$font_size: get_font_size_by_breakpoint($font_sizes,$fontKey, $breakpoint);
-		
-		.font-size-#{$fontKey} {
-			font-size: $font_size;
-			line-height: map-get($defaults, 'line-height');
+    .font-size-#{$fontKey} {
+      font-size: $font_size;
+      line-height: map-get($defaults, "line-height");
 
-			&.dotdotdot {
-				@for $i from 1 through 5 {
-					&.lines-#{$i} {
-						max-height: ($font_size * map-get($defaults, 'line-height-size')) * $i;
-						overflow:hidden;
-					}
-				}
-			}
-		}
-
-	}
+      &.dotdotdot {
+        @for $i from 1 through 5 {
+          &.lines-#{$i} {
+            max-height: ($font_size * map-get($defaults, "line-height-size")) *
+              $i;
+            -webkit-line-clamp: $i;
+          }
+        }
+      }
+    }
+  }
 }

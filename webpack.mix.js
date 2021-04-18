@@ -16,6 +16,7 @@ mix
 	.setPublicPath('./public')
 	.js('src/js/app.js', 'js/')
 	.sass('src/scss/app.scss', 'css/')
+	.sourceMaps(false, 'source-map')
 	.version();
 
 
